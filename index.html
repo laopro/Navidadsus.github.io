@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Navidad!</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #ff5722;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            background-color: #ff5722;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #ff784e;
+        }
+
+        pre {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            animation: mover 4s ease-in-out infinite;
+            color: #00e676;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            overflow-x: auto;
+            word-wrap: break-word;
+            display: none; /* Ocultar al inicio */
+            margin-top: 2rem;
+        }
+
+        @keyframes mover {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(65px);
+            }
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #cccccc;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Feliz Navidad!</h1>
+        <p>Presiona el botón para disfrutar la magia 🎄</p>
+    </header>
+    <button id="startBtn">¿Quieres Navidad?</button>
+    <main>
+        <audio id="bgMusic" loop>
+            <source src="navidadsus.mp3" type="audio/mpeg">
+            Tu navegador no soporta el reproductor de audio.
+        </audio>
+        <pre id="asciiArt">
+        ⣠⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢰⡿⠋⠁⠀⠀⠈⠉⠙⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣿⠇⠀⢀⣴⣶⡾⠿⠿⠿⢿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣀⣀⣸⡿⠀⠀⢸⣿⣇⠀⠀⠀⠀⠀⠀⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣾⡟⠛⣿⡇⠀⠀⢸⣿⣿⣷⣤⣤⣤⣤⣶⣶⣿⠇⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀
+⢀⣿⠀⢀⣿⡇⠀⠀⠀⠻⢿⣿⣿⣿⣿⣿⠿⣿⡏⠀⠀⠀⠀⢴⣶⣶⣿⣿⣿⣆
+⢸⣿⠀⢸⣿⡇⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⣿⡇⣀⣠⣴⣾⣮⣝⠿⠿⠿⣻⡟
+⢸⣿⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠉⠀
+⠸⣿⠀⠀⣿⡇⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠉⠀⠀⠀⠀
+⠀⠻⣷⣶⣿⣇⠀⠀⠀⢠⣼⣿⣿⣿⣿⣿⣿⣿⣛⣛⣻⠉⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⣿⣀⣀⣀⣼⡿⢿⣿⣿⣿⣿⣿⡿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⠛⠛⠛⠋⠁⠀⠙⠻⠿⠟⠋⠑⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </pre>
+    </main>
+    <footer>
+        <p>¡Nos vemos el próximo año! 🎉</p>
+    </footer>
+    <script>
+        const startBtn = document.getElementById("startBtn");
+        const asciiArt = document.getElementById("asciiArt");
+        const bgMusic = document.getElementById("bgMusic");
+
+        startBtn.addEventListener("click", () => {
+            // Mostrar el arte ASCII
+            asciiArt.style.display = "block";
+
+            // Reproducir música
+            bgMusic.play().catch(error => {
+                console.warn("Reproducción bloqueada por el navegador:", error);
+            });
+
+            // Ocultar el botón
+            startBtn.style.display = "none";
+        });
+    </script>
+</body>
+</html>
